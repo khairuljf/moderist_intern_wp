@@ -411,24 +411,23 @@ Navigation
     transition: all .4s ease-in-out;
 }
 
-.navbar-custom ul.nav li a {
+.navbar ul li a {
     font-size: 13px;
     letter-spacing: 1px;
     color: white!important;
     text-transform: uppercase;
     font-weight: normal;
-    background: transparent;
     font-family: Georgia;
     border-radius: 4px!important;
     margin-left: 5px!important;
   
 }
-.navbar-custom ul.nav ul.dropdown-menu {
+.navbar-custom ul.nav ul.sub-menu {
     border-radius: 0;
     margin-top: 16px;
     background: black;
 }
-.dropdown.dropdown-menu ul li a:hover{
+.sub-menu ul li a:hover{
     background: none!important
 }
 .navbar-custom.navbar-fixed-top .nav li a:hover, .navbar-custom.navbar-fixed-top .nav li a:focus, .navbar-custom.navbar-fixed-top .nav li.active a, .navbar-custom.navbar-fixed-top .nav li.active {
@@ -1229,10 +1228,12 @@ Testimonial
     color: #333;
     
 }
-.thumbnail i{
+.thumbnail img{
         padding: 20px 30px;
+        width: 132px;
+        height: 120px;
 }
-.thumbnail:hover i{
+.thumbnail:hover img{
     background: white;
     color: black;
 
@@ -1297,10 +1298,9 @@ Testimonial
     padding: 100px 0 0 0;
 }
 .navbar.navbar-custom.navbar-fixed-top {
-    background: #290000;
+    background: transparent;
     border-top: 5px solid #76c38f;
 }
-
 
 .carousel-control.left,.carousel-control.right  {background:none;width:25px; z-index: 999;}
 .carousel-control.left {top:left:-25px;}
@@ -1747,6 +1747,25 @@ a.scrollup i:hover {
 	font-size:38px;
 	padding:45px 0;
 }
+
+.navbar ul{
+    margin: 0;
+    list-style: none;
+    margin-top: 40px;
+}
+.navbar ul li{
+    float: left;
+}
+.navbar ul li a{
+    padding: 15px 20px;
+    
+}
+.navbar ul li a:hover{
+    color: white;
+    border-radius: 5px!important;
+    background: #76c38f!important;
+}
+
 
 
 
