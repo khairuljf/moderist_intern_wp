@@ -1,4 +1,6 @@
 /*global jQuery:false */
+
+
 (function ($) {
 
 	var wow = new WOW(
@@ -223,4 +225,5 @@ $(window).load(function() {
 	$("button").click(function(){
     $("p").removeClass("intro");
 });
+
 

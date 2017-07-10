@@ -9,6 +9,14 @@
 
         
 
+            <?php
+            
+            global $redux_demo;
+            
+            ?>
+     
+        
+
 
 <?php wp_head(); ?>
     </head>
@@ -27,7 +35,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
                         <a class="navbar-brand" href="<?php bloginfo('home'); ?>">
-                            <h1>LOGO</h1>
+                            <img src="<?php echo $redux_demo['set_logo']['url']; ?>" class="img-responsive" style="width: 60px; height: 60px;">
                         </a>
                     </div>
 
