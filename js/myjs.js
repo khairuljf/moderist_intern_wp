@@ -1,3 +1,10 @@
-jQuery(document).ready(function {
-  jQuery(body).css('display', 'none');
-});
+
+
+
+
+$(document).ready(function(){
+$(".khairul:first-child").addClass("active");
+
+}); 
+
+

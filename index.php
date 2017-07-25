@@ -11,31 +11,32 @@ get_header();
 
 <!-- Section: boxes -->
 
-                    <div class="container paddingtop-70">
+
+                    <div class="container sliderbg paddingtop-100">
                         <div class="row">
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                </ol>
+                                <?php $slider=new WP_Query(array(
+                                    'post_type'=>'slider',
+                                )) ?>
 
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <img src="..." alt="...">
-                                        <div class="carousel-caption">
-                                            ...
+                                    <?php while($slider->have_posts()):$slider->the_post(); ?>
+                                    <div class="item khairul">
+                                        <div class="row">
+                                            <div class="col-md-4 col-md-offset-2">
+                                                <a href="<?php the_permalink();  ?>"><h1 class="slider-heading"><?php the_title(); ?></h1></a>
+                                                <?php the_excerpt(); ?>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <?php the_post_thumbnail('portfolio-thum', array('class' => 'img-responsive')); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <img src="..." alt="...">
-                                        <div class="carousel-caption">
-                                            ...
-                                        </div>
-                                    </div>
-                                    ...
+                                    <?php endwhile; ?>
+                                    
+                                    
                                 </div>
 
                                 <!-- Controls -->
@@ -76,7 +77,6 @@ get_header();
                         <div class="caption">
                             <h3><?php the_title(); ?></h3>
                             <p><?php the_content(); ?></p>
-
                         </div>
                     </div>
 
@@ -135,7 +135,17 @@ $portfolio = new Wp_Query(array(
 
         </div>
     </div>
-</section>	
+</section>
+
+
+<section id="partner" class="home-section paddingbot-60">
+   
+    <div class="container">
+        <div class="row">
+           
+        </div>
+    </div>
+</section>
 
 
 

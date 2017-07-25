@@ -23,7 +23,7 @@
     <body id="page-top" <?php body_class(); ?> data-spy="scroll" data-target=".navbar-custom">
 
 
-        <div id="wrapper">
+        <div id="wrapper" class="sliderbg">
 
             
                 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
